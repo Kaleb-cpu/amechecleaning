@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --brand-primary: #1f3c88;
+  --brand-secondary: #7ed957;
+  --brand-accent: #1db6e6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: radial-gradient(
+      circle at top left,
+      rgba(148, 163, 184, 0.25),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(125, 211, 252, 0.28),
+      transparent 55%
+    ),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+main {
+  @apply w-full;
+}
+
+.page-shell {
+  @apply mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pt-10;
+}
+
+.section-shell {
+  @apply relative mx-auto w-full max-w-6xl py-12 sm:py-16 lg:py-20;
+}
+
+.section-heading {
+  @apply text-sm font-semibold uppercase tracking-[0.24em] text-slate-500;
+}
+
+.section-title {
+  @apply mt-3 text-balance text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl;
+}
+
+.section-subtitle {
+  @apply mt-4 max-w-2xl text-pretty text-base text-slate-600 sm:text-lg;
+}
